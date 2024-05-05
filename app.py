@@ -12,7 +12,7 @@ api = Api(app)
 class EngineResources:
     def __init__(self) -> None:
         with open('./engine/gl_matrix.html', 'r') as f:
-            self.__matrix_libs = BeautifulSoup(f.read(), 'html.parser')
+            self.__matrix_libs = BeautifulSoup(f.read(), 'html.parser').prettify()
             
     @property
     def external_libs(self):
