@@ -12,6 +12,7 @@ RUN pip install Flask
 RUN pip install gunicorn
 RUN pip install Flask-RESTful
 RUN pip install BeautifulSoup
+
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
 # For environments with multiple CPU cores, increase the number of workers
