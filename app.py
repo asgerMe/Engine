@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import json
+
 from flask import Flask
 from flask import make_response, render_template
 
