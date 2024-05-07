@@ -28,10 +28,10 @@ class EngineResources:
         return BeautifulSoup(x.read(), 'html.parser').prettify().replace('\"', "'").replace("\n", '').strip()
     
     def create_webworker(self, js_code, workerName):
-        js_string = "<script> \n"
-        js_string += "const workerString ="
-        js_string += "`{}`\n".format(js_code.read())
-        js_string += "if(window.Worker){{const {} = new Worker(workerString)}};</script>".format(workerName)
+        js_string = "<script>"
+        js_string += " const workerString ="
+        js_string += " `{}`".format(js_code.read())
+        js_string += " if(window.Worker){{const {} = new Worker(workerString)}};</script>".format(workerName)
         return js_string
     
     def create_game_app(self, js_code):
