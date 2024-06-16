@@ -68,10 +68,13 @@ async function InitGameLoopManager()
    
     while(true)
     { 
+      
         frameStart = Date.now();
         glm.IncrementFrame();
        
         let df = glm.GetFrame() - stopFrames;
+        console.log(df)
+        
         if(df > 60)
         {
             MFPS = 1000.0*df / (Date.now() - stopEvent);
